@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Sabfit</title>
+
+<!-- Bootstrapp CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+<!-- AngularJS CDNs -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-animate.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-touch.js"></script>    
+
+
+<!-- Local scripts -->
+    <script src="js/app.js"></script>
+
+    <script src="js/controllers/navigation.js"></script>
+
+    <script src="js/controllers/home.js"></script>
+
+    <script src="js/controllers/packages.js"></script>
+
+    <script src="js/controllers/contact.js"></script>
+
+<!-- Local css -->
+    <link rel="stylesheet" href="css/main.css"/>
+    
+  </head>
+
+
+  
+  <body ng-app="myApp">
+    <!-- START This contains your App navigation links, feel free to follow the pattern already there (within the <ul></ul> element) to add further navigation links START -->
+    <div class="header">
+      <div class="navbar navbar-inverse" data-role="navigation" data-ng-controller="NavigationCtrl">
+        <!-- START The actual navigation code resides in "views/navigation.html" for maintainability START -->
+        <div class="container" data-ng-include data-src="'views/navigation.html'"></div>
+        <!-- END The actual navigation code resides in "views/navigation.html" for maintainability END -->
+      
+      </div>
+    
+    </div>
+    <!-- END This contains your App navigation links, feel free to follow the pattern already there (within the <ul></ul> element) to add further navigation links END -->
+
+    <!-- START This bit will load the app templates / Views, does not need any other code for it to work, leave untouched START -->
+    <div class="container">
+      <div data-ng-view=""></div>
+    
+    </div>
+    <!-- END This bit will load the app templates / Views, does not need any other code for it to work, leave untouched END -->
+
+    <!-- START This contains the app-wide footer, will always be visible and be displayed at the bottom of the browser window, feel free to customise START -->
+    <div class="footer">
+      <div class="container">
+        <p>© Sabfit, 2016</p>
+      
+      </div>
+    
+    </div>
+    <!-- END This contains the app-wide footer, will always be visible and be displayed at the bottom of the browser window, feel free to customise END -->
+
+  </body>
+
+
+
+</html>
